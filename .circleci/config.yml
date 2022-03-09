@@ -17,7 +17,7 @@ jobs:
           name: Write DSA private key to file
           command: |
             dsaContent="-----BEGIN DSA PRIVATE KEY-----\n"
-            dsaContent+=${env:DSA_PRIV_KEY//' '/'\n'}
+            dsaContent+=${DSA_PRIV_KEY//' '/'\n'}
             dsaContent+="\n-----END DSA PRIVATE KEY-----\n"
             echo $dsaContent
 
