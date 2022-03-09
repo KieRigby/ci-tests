@@ -19,7 +19,7 @@ jobs:
             dsaContent="-----BEGIN DSA PRIVATE KEY-----\n"
             dsaContent+=${DSA_PRIV_KEY//' '/'\n'}
             dsaContent+="\n-----END DSA PRIVATE KEY-----\n"
-            echo $dsaContent >> $CIRCLE_WORKING_DIRECTORY/dsa_priv.pem
+            echo -e $dsaContent >> $CIRCLE_WORKING_DIRECTORY/dsa_priv.pem
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
